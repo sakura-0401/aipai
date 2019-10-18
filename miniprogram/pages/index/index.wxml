@@ -1,0 +1,26 @@
+<!-- 轮播图区域 -->
+<view class='banner_swiper'>
+  <swiper indicator-dots='true' indicator-color='#FFA500' indicator-active-color='#00CED1' autoplay='true' interval='3000' circular='true'>
+    <swiper-item wx:for='{{images}}' wx:key='index'>
+      <image src='{{item}}'></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 说说区域 -->
+<view class='scene_list' bindtap='toDetail' wx:for="{{list}}" wx:key data-id='{{item._id}}'>
+  <image class='scene_list_img' src='{{item.fileIds[0]}}'></image>
+  <view class='scene_title'>{{item.title}}</view>
+  <view class='scene_infomation'>
+    <text>{{item.userInfo.createdAt}}</text>
+    <view>{{item.userInfo.address}}</view>
+  </view>
+
+  <view class='user_head'>
+    <image src='{{item.userInfo.avatarUrl}}' mode='widthFix'></image>
+    <view> ~ by {{item.userInfo.nickName}}</view>
+  </view>
+</view>
+
+<view class='publish_button' bindtap='toSend'>+</view>
+<view class='user_button' bindtap='toMe'>Me</view>

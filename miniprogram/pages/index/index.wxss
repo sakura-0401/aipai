@@ -1,0 +1,169 @@
+page {
+  color: #000;
+}
+
+.banner_swiper {
+  height: 350rpx;
+  width: 100%;
+  overflow: hidden;
+}
+
+swiper {
+  height: 350rpx;
+  position: relative;
+  display: block;
+  padding: 10rpx;
+}
+
+.banner_swiper image {
+  width: 100%;
+  height: 350rpx;
+  display: block;
+  margin: 0 auto;
+  border-radius: 30rpx;
+}
+
+.item {
+  background: azure;
+  padding: 20rpx;
+  margin-top: 10rpx;
+  border-radius: 70rpx;
+  display: flex;
+  color: aqua;
+  box-shadow: 0 4rpx 10rpx white;
+}
+
+.header_icon {
+  /*在微信小程序中 有一个独有的单位：rpx 响应式单位  *//*认为所有设置的宽度 都是750rpx  */
+  width: 100rpx;
+  height: 100rpx;
+  /*设置头像的背景颜色  */
+  background: white;
+  background: no-repeat center;
+  background-size: cover;
+  /*设置头像的边框  */
+  border: 4rpx solid gainsboro;
+  /*设置头像的半径  设置为圆形*/
+  border-radius: 50%;
+}
+
+.content_container {
+  padding-left: 20rpx;
+  width: 582rpx;
+}
+
+.content_container .date, .content_container .name {
+  width: 100%;
+  text-align: right;
+}
+
+/*发布按钮  */
+
+.publish_button, .user_button {
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+  text-align: center;
+  line-height: 95rpx;
+  background: rgba(240, 240, 240, 0.4);
+  color: #0ff;
+  font-size: 60rpx;
+  border-radius: 50%;
+  box-shadow: 2rpx 2rpx 10rpx white;
+}
+
+.image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20rpx 0;
+}
+
+.image_container image {
+  width: 400rpx;
+  height: 400rpx;
+  /*阴影  */
+  box-shadow: 0 4rpx 10rpx aqua;
+  border-radius: 20rpx;
+}
+
+.user_button {
+  right: 0;
+  left: 20rpx;
+  font-size: 40rpx;
+}
+
+.scene_list {
+  height: 500rpx;
+  padding: 10rpx;
+  position: relative;
+  margin-bottom: 10rpx;
+  box-shadow: 0 4rpx 10rpx aqua;
+  border-radius: 20rpx;
+}
+
+.scene_list_img {
+  width: 100%;
+  height: 500rpx;
+  border-radius: 20rpx;
+}
+
+.scene_title {
+  position: absolute;
+  top: 10rpx;
+  left: 40rpx;
+  font-size: 40rpx;
+  color: #eee;
+  font-weight: bold;
+  margin-top: 20rpx;
+}
+
+.scene_infomation {
+  width: 750rpx;
+  position: absolute;
+  top: 60rpx;
+  left: 40rpx;
+  border-left: 6rpx solid aqua;
+  margin-top: 30rpx;
+  color: #fff;
+  font-weight: bold;
+  padding-left: 15rpx;
+}
+
+.scene_infomation>view {
+  font-size: 18rpx;
+  line-height: 20rpx;
+}
+
+.scene_infomation>text {
+  font-size: 25rpx;
+  line-height: 25rpx;
+  display: block;
+  padding-bottom: 10rpx;
+}
+
+/* 用户头像 */
+
+.user_head {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 10rpx;
+  bottom: 30rpx;
+}
+
+.user_head image {
+  width: 70rpx;
+  height: 70rpx;
+  display: block;
+  border-radius: 50%;
+}
+
+.user_head>view {
+  color: #fff;
+  font-weight: bold;
+  font-size: 30rpx;
+  padding: 0 20rpx;
+}

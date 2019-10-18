@@ -1,0 +1,16 @@
+<!-- <view style='font-size:14px;'>快来分享一下你的游记吧</view> -->
+<input placeholder='标题' bindblur='inputTitle'></input>
+  <textarea placeholder="想说的话写在这里" auto-focus='true' bindblur='inputAction'></textarea>
+
+<!-- 图片预览区域 -->
+<view class="img" >
+<view wx:for="{{images}}" wx:key>
+<image src="{{item}}"></image>
+</view>
+  
+</view>
+<view class='send'>
+<van-button bindtap="selectImage" type="primary" size="large">图片</van-button>
+<van-button bindtap="submit" type="info" size="large">发表</van-button>
+</view> 
+

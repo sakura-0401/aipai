@@ -1,0 +1,10 @@
+page{
+/* padding: 20rpx; */
+/*让盒模型里面元素的宽度是包含边框内边距的  */
+ box-sizing: border-box; 
+ color: white;
+ text-shadow:  3rpx 3rpx 5rpx #0d0;
+ background: url('http://ku.90sjimg.com/back_pic/04/14/47/99582004e356071.jpg!/fw/304/quality/90/unsharp/true/compress/true/canvas/304x414/cvscolor/F6F6F600') no-repeat center;
+ background-size: cover;
+ height: 100%;
+}

@@ -1,0 +1,22 @@
+ <view class='top_container'>
+<view class='header_icon'>
+  <image src='{{info.avatarUrl}}'></image>
+</view>
+
+<view class='username'>{{info.nickName}}</view>
+<view class='city'>{{info.city}},{{info.province}}</view> 
+
+</view>
+<!-- <button open-type="getUserInfo" bindgetuserinfo="getUser"></button> -->
+<view class='list'>
+
+<view class='item' wx:for='{{list}}' wx:key='mine'>
+<view class='left'>
+<image src='{{item.icon}}'></image>
+<view>{{item.title}}</view>
+</view>
+<view class='right'>></view>
+</view>
+
+</view>
+

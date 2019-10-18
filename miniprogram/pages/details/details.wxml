@@ -1,0 +1,23 @@
+<view>
+
+  <view class='message_container container' wx:for="{{list}}" wx:key>
+    <view class='address'>{{info.address?info.address:"火星"}}</view>
+    <view class='content'>{{item.content}}"今天的雨好大啊，被淋湿了"</view>
+    <view class='image_container'>
+      <image class="img1" wx:if="{{item.fileIds.length==1}}" wx:for='{{item.fileIds}}' wx:for-item="img" wx:key src='{{img}}' mode='widthFix'></image>
+      <image class="img2" wx:if="{{item.fileIds.length==2}}" wx:for='{{item.fileIds}}' wx:for-item="img" wx:key src='{{img}}' mode='widthFix'></image>
+      <image class="img3" wx:if="{{item.fileIds.length>=3}}" wx:for='{{item.fileIds}}' wx:for-item="img" wx:key src='{{img}}' mode='widthFix'></image>
+      <!-- <image class="img3" wx:if="{{item.fileIds.length>3}}" wx:for='{{item.fileIds}}' wx:for-item="img" wx:key src='{{img}}' mode='widthFix'></image> -->
+    </view>
+    <view class='date'>{{info.createdAt}}"2018-06-17 11:31:35"</view>
+    <view class='name'>~ by {{info.username}}"love"</view>
+  </view>
+
+  <view class='comment_tools container'>
+    <textarea placeholder='评论区' bindinput="inputAction"></textarea>
+    <view class='commit_button' bindtap='toPublish'>提交评论</view>
+  </view>
+  <view class='list container' wx:if="{{comments.length>0}}">
+    <view class='item' wx:for="{{comments}}">{{item.content}}</view>
+  </view>
+</view>
